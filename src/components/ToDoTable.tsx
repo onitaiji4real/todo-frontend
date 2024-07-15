@@ -101,7 +101,7 @@ export const columns: ColumnDef<Task>[] = [
           row.getValue("Priority") === "High"
             ? "destructive"
             : row.getValue("Priority") === "Medium"
-            ? ""
+            ? "default"
             : "secondary"
         }
       >
