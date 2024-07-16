@@ -154,7 +154,7 @@ export function ToDoTable() {
     React.useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = React.useState({});
 
-  const url = "http://localhost:8787/todos"; // 正確的 API URL
+  const url = `${process.env.BASE_URL}/todos`;
 
   const { data, isLoading, error } = useSWR<Task[]>(url, fetcher);
 

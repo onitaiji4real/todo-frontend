@@ -34,7 +34,6 @@ export function EditToDo({ task }: { task: Task }) {
   };
 
   const handleDateChange = (date: Date) => {
-    // 移除时间部分，只保留日期部分
     const newDate = new Date(
       Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
     );
@@ -60,7 +59,7 @@ export function EditToDo({ task }: { task: Task }) {
     console.log(updatedTaskWithoutId);
 
     try {
-      const response = await fetch(`http://localhost:8787/todos/${_id}`, {
+      const response = await fetch(`${process.env.BASE_URL}/todos/${_id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
