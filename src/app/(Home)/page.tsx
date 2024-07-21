@@ -1,10 +1,5 @@
-import Layout from "@/components/Layout/Layout";
-import Image from "next/image";
+import React from "react";
 
-export default function Home() {
-  return (
-    <>
-      <Layout />
-    </>
-  );
+export default function page() {
+  return <div>Hi</div>;
 }
